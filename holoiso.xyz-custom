@@ -1,0 +1,9 @@
+:custom
+item holoiso ${space} load holoiso
+choose choice
+echo ${clr}
+goto ${choice}
+:holoiso                 
+kernel http://assets/holoiso/vmlinuz-linux     
+initrd http://assets/holoiso/initramfs-linux.img      
+boot || chain utils.ipxe
